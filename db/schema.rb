@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171025202559) do
+ActiveRecord::Schema.define(version: 20171025190308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "gossips", force: :cascade do |t|
-    t.string "author"
+    t.string "anonymous_author"
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
