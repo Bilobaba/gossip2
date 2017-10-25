@@ -12,16 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :author %>
-    <%= form.text_field :author, id: :gossip_author %>
+    <%= form.label :Auteur %>
+    <%= form.text_field :anonymous_author, id: :gossip_anonymous_author %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
+    <%= form.label :contenu %>
     <%= form.text_field :content, id: :gossip_content %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <% if gossip.id.nil? %>
+      <%= form.submit "Ajouter ce potin" %>
+    <% else %>
+      <%= form.submit "Modifier" %>
+    <% end %>
   </div>
 <% end %>

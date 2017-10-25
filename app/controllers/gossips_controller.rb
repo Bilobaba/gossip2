@@ -69,6 +69,6 @@ class GossipsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gossip_params
-      params.require(:gossip).permit(:author, :content)
+      params.require(:gossip).permit(:anonymous_author, :content)
     end
 end
